@@ -9,6 +9,6 @@ The exported dataset can also be found in the 'Data' folder.
 
 The full pdf analysis are in the 'Markdowns' folder.
 
-The individual visualisations are in the 'Visualisations' folder.
+The r script and descriptions are in the 'Script' folder.
 
-The r script and descriptions are in the 'Codebook' folder.
+The individual visualisations are in the 'Visualisations' folder.
