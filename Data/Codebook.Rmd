@@ -1,0 +1,82 @@
+---
+title: "codebook"
+author: "Emilia Winstanley-Stitt"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+# Codebook
+
+## Project Description
+
+The project explores the correlational relationship between listening hours and mental health disorders (anxiety and depression). It also investigates the relationship between favourite genre and mental health disorders. Visualisations are created to illustrate the findings.
+
+### Project Context
+
+"Music therapy, or MT, is the use of music to improve an individual's stress, mood, and overall mental health. MT is also recognized as an evidence-based practice, using music as a catalyst for "happy" hormones such as oxytocin.
+
+However, MT employs a wide range of different genres, varying from one organization to the next.
+
+The MxMH dataset aims to identify what, if any, correlations exist between an individual's music taste and their self-reported mental health. Ideally, these findings could contribute to a more informed application of MT or simply provide interesting sights about the mind." (Rasgaitis, 2022)
+
+###Study design and data processing
+
+A cross-sectional study design was used by the surveyer (Rasgaitis, 2022). The data
+
+###Collection of the raw data
+
+Rasgaitis (2022) collected data using a Google form, posted online to reddit forums, discord servers and other social media platforms. Posters and business cards also provided in person advertisement to the public.
+
+Respondents were not restricted by age or location and the survey was brief and excluded harder questions, promoting completion.
+
+
+##The data
+
+###Guide to create the tidy data file
+1. Download the data from kaggle via the following url:
+https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results?select=mxmh_survey_results.csv
+This can also be found in the data folder.
+
+2. Save the data as csv in your working directory
+
+###Data preprocessing
+
+A full description of data preprocessing can be found in the script.
+
+###Variable 1 
+The first variable is 'Mental Health', divided into Anxiety and Depression scores. This is a continuous variable, with values ranging from 0 to 10. Anxiety has a mean score of 5.84 whereas depression averages at 4.80. This variable was used in both analyses.
+
+```{r mental health means}
+colMeans(dataset[, c("Anxiety", "Depression")])
+```
+
+###Variable 2
+The fist analysis looked at the relationship between Mental Health and 'Hours Per Day'. Listening hours was a continuous variable ranging from 0 to 24. Mean listening hours are 3.6.
+
+```{r Hours means}
+mean(dataset$Hours.per.day)
+```
+
+###Variable 3
+The second analysis looked at the relationship between Mental Health and 'Favourite Genre'. In descending order, the preffered genres were:
+Rock (n=188), Pop (n=114), Metal(n=88), Classical(n=53), Video game music (n=44), EDM (n=37), Hip hip (n=35), R&B(n=35), Folk (n=30), K pop(n=26), Country(n=25), Rap(n=25), Jazz(n=20), Lofi(n=10), Gospel(n=6), Latin(n=3)
+
+The top 10 genres were then selected for analysis.
+
+```{r Sort Genres}
+sorted_genres <- sort(genre_counts, decreasing = TRUE)
+print(sorted_genres)
+
+top_10_genres <- names(sorted_genres)[1:10]
+data_top_10 <- filtered_data[filtered_data$Fav.genre %in% top_10_genres, ]
+```
+
+##Sources
+Rasgaitis, C. (2022). Music and Mental Health Survey Results. [Survey]. Kaggle.
+
+
+
+
+
+
+
