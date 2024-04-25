@@ -8,8 +8,8 @@ The full dataset can be downloaded through this website link: https://www.kaggle
 
 The exported dataset can also be found in the 'Data' folder, along with the codebook.
 
-The full pdf analysis are in the 'Markdowns' folder.
+The project markdowns (Rmd, PDF and HTML) are in the 'Markdowns' folder.
 
-The r script and descriptions are in the 'Script' folder.
+The r script with descriptions is in the 'Script' folder.
 
-The individual visualisations are in the 'Visualisations' folder.
+Screenshots of the individual (interactive) visualisations are in the 'Visualisations' folder.
