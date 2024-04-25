@@ -24,7 +24,7 @@ The 2024 article by Radboud University states that listening to music relieves s
 
 ## The Data
 
-Data was taken from ‘kaggle’, an online resource for gathering and reporting datasets. The specific webpage for the current data contained survey results for a large sample (n=736) of self-reported music taste and mental health data, as well as other variables such as listening frequencies. 
+Data was taken from ‘kaggle’, an online resource for gathering and reporting datasets. The specific webpage for the current data contained survey results for a large sample (n=736) of self-reported music taste and mental health data, as well as other variables such as listening frequencies. The data analysis is relevant to the exploration of techniques in music therapy.
 
 A full reference of the data is:
 Rasgaitis, C. (2022). Music and Mental Health Survey Results. [Survey]. Kaggle.
@@ -36,7 +36,7 @@ The data was downloaded as .csv to the working directory and then imported into 
 
 ```{r dataset, message=FALSE}
 # Load the dataset in the csv file into R
-dataset <- read.csv("music_mentalhealth_data.csv")
+dataset <- read.csv("dataset.csv")
 ```
 
 ## Data Preparation 
