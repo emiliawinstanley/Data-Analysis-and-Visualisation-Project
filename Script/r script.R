@@ -36,11 +36,11 @@ library(here)
 
 # Save dataset as music_mentalhealth_data.csv 
 # load the dataset in the csv file into R
-dataset <- read.csv("music_mentalhealth_data.csv")
+dataset <- read.csv("dataset.csv")
 
 # Set working directory 
 setwd(here())
-data_path <- here::here("dataset", "music_mentalhealth_data.csv")
+data_path <- here::here("dataset", "dataset.csv")
 
 # view the data
 view(dataset)
