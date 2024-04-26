@@ -1,6 +1,6 @@
 
 
-# Download the mental health and music dataset as df via this link
+# Download the mental health and music dataset as 'dataset.csv' via this link
 url = https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results?select=mxmh_survey_results.csv
 
 
